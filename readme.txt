@@ -1,8 +1,8 @@
-//remove body class
+// Remove specific CSS class by body.
 
 add_filter('body_class', function (array $classes) {
-    if (in_array('class_name', $classes)) {
-      unset( $classes[array_search('class_name', $classes)] );
+    if (in_array('class-name', $classes)) {
+      unset( $classes[array_search('class-name', $classes)] );
     }
   return $classes;
 });
